@@ -1,0 +1,40 @@
+{
+    "questions": [
+        {
+            "question": "What is the capital of France?",
+            "options": [
+                "Paris",
+                "London",
+                "Berlin",
+                "Rome"
+            ],
+            "correct_answer": "Paris",
+            "grade": 1,
+            "reward": 10
+        },
+        {
+            "question": "Which planet is known as the Red Planet?",
+            "options": [
+                "Earth",
+                "Venus",
+                "Mars",
+                "Jupiter"
+            ],
+            "correct_answer": "Mars",
+            "grade": 2,
+            "reward": 20
+        },
+        {
+            "question": "Who wrote 'Romeo and Juliet'?",
+            "options": [
+                "Charles Dickens",
+                "William Shakespeare",
+                "Jane Austen",
+                "Mark Twain"
+            ],
+            "correct_answer": "William Shakespeare",
+            "grade": 3,
+            "reward": 30
+        }
+    ]
+}
