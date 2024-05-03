@@ -39,6 +39,8 @@ $(document).ready(function () {
                 revealTextWithTyping($paragraph);
                 // Add a class to indicate that the typing effect has been applied
                 $(this).addClass("typing-effect-applied");
+                // Increment totalGrade by 15 for each slide loaded
+                totalGrade += 15;
             }
         });
     }
@@ -87,7 +89,7 @@ $(document).ready(function () {
     }
 
     // Set interval for automatic slideshow (10 seconds)
-    slideshowInterval = setInterval(nextSlide, 10000);
+    slideshowInterval = setInterval(nextSlide, 65000);
 
     // Add click event listener to the quiz button
     $("#quiz-button").click(function () {
@@ -104,7 +106,7 @@ $(document).ready(function () {
         $("main").addClass("quiz-active");
         // Stop the automatic slideshow timer
         // Initialize total points earned
-        totalGrade = 0;
+        totalGrade += 25; // Add 25 points for attempting the quiz
         // Load the first question
         showQuestion(0);
     }
@@ -206,4 +208,12 @@ $(document).ready(function () {
     }
 
     setInterval(updateFeedbackAndRewards, 1000);
+
+    // Add scroll event listener to award points when user scrolls down
+    $(window).scroll(function () {
+        if ($(window).scrollTop() + $(window).height() == $(document).height()) {
+            totalGrade += 30; // Add 30 points when user scrolls to the bottom of the page
+            updateFeedbackAndRewards(); // Update rewards section
+        }
+    });
 });
