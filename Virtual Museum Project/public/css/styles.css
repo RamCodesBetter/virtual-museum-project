@@ -78,8 +78,9 @@ section:last-child ul {
 
 /* Smooth transition between slides */
 .slide {
-    opacity: 0;
+    opacity: 1;
     transition: opacity 1s ease-in-out;
+    display: block !important;
 }
 
 .slide.active {
@@ -159,7 +160,12 @@ button.go-back-button:hover {
     transform: translateY(-50%);
 }
 
-/* CSS for Interactive Storytelling Section */
+/* Adjust margin-bottom for the last slide */
+.slide:last-child {
+    margin-bottom: 0;
+}
+
+/* Style for Interactive Storytelling Section */
 .interactive-storytelling {
     background-color: #f9f9f9;
     padding: 20px;
@@ -193,4 +199,14 @@ button.go-back-button:hover {
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin-bottom: 30px;
+}
+
+#quiz-container {
+    display: block;
+    width: 100%;
+    max-width: 800px;
+    /* Adjust as needed */
+    margin: 0 auto;
+    /* Center the container horizontally */
+    padding: 20px;
 }
