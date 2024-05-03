@@ -1,25 +1,3 @@
-// Import the functions you need from the SDKs you need
-import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
-
-// Your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
-const firebaseConfig = {
-    apiKey: "AIzaSyAd9zcVU_cks7DeAgtDDz7lDdzL_iiELko",
-    authDomain: "vmps-ram.firebaseapp.com",
-    projectId: "vmps-ram",
-    storageBucket: "vmps-ram.appspot.com",
-    messagingSenderId: "786094840690",
-    appId: "1:786094840690:web:7ca5600d3b558a6c295beb",
-    measurementId: "G-YQTGBZ4MXC"
-};
-
-// Initialize Firebase
-const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
-
 $(document).ready(function () {
     let totalGrade = 0;
     let slideshowInterval; // Variable to hold the interval ID
